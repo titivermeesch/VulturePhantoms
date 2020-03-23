@@ -9,6 +9,8 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import java.util.Objects;
+
 public class Main extends JavaPlugin {
     private static Plugin plugin;
 
@@ -19,7 +21,7 @@ public class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new PlayerDeath(), this);
         getServer().getPluginManager().registerEvents(new TakeFire(), this);
         getServer().getPluginManager().registerEvents(new VultureDeath(), this);
-        getCommand("vulturephantoms").setExecutor(new VultureCommand());
+        Objects.requireNonNull(getCommand("vulturephantoms")).setExecutor(new VultureCommand());
         Bukkit.getConsoleSender().sendMessage("VulturePhantoms v1.1 has been enabled");
     }
 
