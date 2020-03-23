@@ -1,0 +1,10 @@
+main: com.playbosswar.vulturephantoms.Main
+author: PlayBossWar
+name: "${project.name}"
+version: "${project.version}"
+description: "${project.description}"
+commands:
+  vulturephantoms:
+    usage: /<command>
+    description: Main command
+    aliases: [vp]

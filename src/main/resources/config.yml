@@ -1,0 +1,29 @@
+# Configuration file for VulturePhantoms
+
+# The number of blocks relative to the position of the player the vulture will spawn
+# If player dies at height 70 and spawnHeight is 10, then the vulture will be spawn at height 80
+spawnHeight: 10
+
+# The radius of the circle that the vulture will follow
+circleRadius: 3.0
+
+# Time in seconds after which the vulture will be removed
+despawnAfter: 120
+
+# Number of maximum vultures that can be instantiated. If you set this to 0, the limit will be disabled
+# If you set this to 50 for example, no more than 50 vultures will be generated. This can reduce lagg if your server has issues with this
+# You can configure the way the limit is handled
+spawnLimit: 0
+
+# This is the action that will happen once the limit is reached (If set above : spawnLimit)
+# remove-1: Will remove the vulture that has there for the longest time
+# remove-all: Will remove all the vultures that are spawned on the server
+# spawn-none: Will not spawn the vulture at all. Vultures will be spawning again once the spawnLimit is not reached anymore
+limitHandler: remove-1
+
+# Worlds where the vultures will not be spawned upon player death
+disabledWorlds:
+  - disabledworld
+
+# Let the vulture steal the player drops. You can get the items back by killing it
+vultureStealDrops: true
