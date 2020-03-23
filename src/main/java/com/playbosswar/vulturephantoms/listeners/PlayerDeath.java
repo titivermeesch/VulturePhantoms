@@ -25,6 +25,7 @@ public class PlayerDeath implements Listener {
     @EventHandler
     public void onPlayerDeath(PlayerDeathEvent e) {
         Player p = e.getEntity();
+        int exp = p.getTotalExperience();
         ArrayList<ItemStack> playerDrops = new ArrayList<>(e.getDrops());
         Location phantomLocation = new Location(p.getWorld(), p.getLocation().getX(), p.getLocation().getY() + plugin.getConfig().getInt("spawnHeight"), p.getLocation().getZ());
 
@@ -62,9 +63,10 @@ public class PlayerDeath implements Listener {
         phantom.setAI(false);
         phantom.setInvulnerable(true);
         phantom.setRemoveWhenFarAway(false);
-        Vulture vulture = new Vulture(uuid, playerDrops, phantom);
+        Vulture vulture = new Vulture(uuid, playerDrops, phantom, exp);
         if (plugin.getConfig().getBoolean("vultureStealDrops")) {
             e.getDrops().clear();
+            e.setDroppedExp(0);
             vulture.getPhantom().setInvulnerable(false);
         }
 

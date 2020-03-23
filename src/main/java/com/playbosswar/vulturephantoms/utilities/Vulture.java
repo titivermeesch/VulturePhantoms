@@ -11,11 +11,13 @@ public class Vulture {
     private UUID uuid;
     private ArrayList<ItemStack> drops;
     private Phantom phantom;
+    private int exp;
 
-    public Vulture(UUID uuid, ArrayList<ItemStack> drops, Phantom phantom) {
+    public Vulture(UUID uuid, ArrayList<ItemStack> drops, Phantom phantom, int exp) {
         this.uuid = uuid;
         this.drops = drops;
         this.phantom = phantom;
+        this.exp = exp;
         VultureManager.addVulture(this);
     }
 
@@ -34,4 +36,6 @@ public class Vulture {
     public Phantom getPhantom() {
         return this.phantom;
     }
+
+    public int getExp() { return this.exp; }
 }

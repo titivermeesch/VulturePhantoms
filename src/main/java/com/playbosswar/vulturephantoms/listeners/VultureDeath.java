@@ -17,5 +17,6 @@ public class VultureDeath implements Listener {
         Vulture vulture = VultureManager.getVulture((Phantom) e.getEntity());
         assert vulture != null;
         e.getDrops().addAll(vulture.getDrops());
+        e.setDroppedExp(vulture.getExp());
     }
 }
