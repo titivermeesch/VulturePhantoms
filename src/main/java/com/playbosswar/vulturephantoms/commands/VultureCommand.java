@@ -11,7 +11,9 @@ public class VultureCommand implements CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String s, String[] args) {
         if(!sender.hasPermission("vulturephantoms.use")) {
             sender.sendMessage("§cYou lack the permission vulturephantoms.use");
+            return true;
         }
+
         if(args.length == 0) {
             sender.sendMessage("§3VulturePhantoms v1.1");
             sender.sendMessage("§3Use /vp reload to reload the config file.");
