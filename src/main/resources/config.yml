@@ -25,5 +25,5 @@ limitHandler: remove-1
 disabledWorlds:
   - disabledworld
 
-# Let the vulture steal the player drops. You can get the items back by killing it
+# Let the vulture steal the player drops and experience. You can get the items and experience back by killing it
 vultureStealDrops: true
