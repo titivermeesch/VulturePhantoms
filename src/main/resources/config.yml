@@ -27,3 +27,6 @@ disabledWorlds:
 
 # Let the vulture steal the player drops and experience. You can get the items and experience back by killing it
 vultureStealDrops: true
+
+# If this is set to true, users will need the permission vulturephantoms.allow to get vultures
+needPermissionToSpawn: false
