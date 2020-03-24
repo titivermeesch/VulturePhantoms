@@ -29,7 +29,7 @@ public class PlayerDeath implements Listener {
         ArrayList<ItemStack> playerDrops = new ArrayList<>(e.getDrops());
         Location phantomLocation = new Location(p.getWorld(), p.getLocation().getX(), p.getLocation().getY() + plugin.getConfig().getInt("spawnHeight"), p.getLocation().getZ());
 
-        if (!ClearSkyCheck.isSkyClear(p) || p.hasPermission("vulturephantoms.exclude")) {
+        if (!ClearSkyCheck.isSkyClear(p) || (plugin.getConfig().getBoolean("needPermissionToSpawn") && !p.hasPermission("vulturephantoms.allow"))) {
             return;
         }
 
