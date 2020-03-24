@@ -1,13 +1,18 @@
 package com.playbosswar.vulturephantoms.utilities;
 
+import com.playbosswar.vulturephantoms.Main;
 import com.playbosswar.vulturephantoms.VultureManager;
+import org.bukkit.World;
 import org.bukkit.entity.Phantom;
 import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
 
 import java.util.ArrayList;
 import java.util.UUID;
 
 public class Vulture {
+    private static Plugin plugin = Main.getPlugin();
+
     private UUID uuid;
     private ArrayList<ItemStack> drops;
     private Phantom phantom;
@@ -22,6 +27,12 @@ public class Vulture {
     }
 
     public void despawnVulture() {
+        World phantomWorld = this.phantom.getWorld();
+        if (plugin.getConfig().getBoolean("dropItemsOnReload")) {
+            for (ItemStack i : this.drops) {
+                phantomWorld.dropItem(this.phantom.getLocation(), i);
+            }
+        }
         this.phantom.remove();
     }
 
@@ -37,5 +48,7 @@ public class Vulture {
         return this.phantom;
     }
 
-    public int getExp() { return this.exp; }
+    public int getExp() {
+        return this.exp;
+    }
 }
