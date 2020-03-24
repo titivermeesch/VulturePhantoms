@@ -8,7 +8,7 @@ spawnHeight: 10
 circleRadius: 3.0
 
 # Time in seconds after which the vulture will be removed
-despawnAfter: 120
+despawnAfter: 600
 
 # Number of maximum vultures that can be instantiated. If you set this to 0, the limit will be disabled
 # If you set this to 50 for example, no more than 50 vultures will be generated. This can reduce lagg if your server has issues with this
@@ -33,3 +33,9 @@ needPermissionToSpawn: false
 
 # This will prevent someone in creative to kill the vulture
 preventCreativeKill: true
+
+# This will drop the items when the vulture is flying too long around (after the despawnAfter value above)
+dropItemsAfterDespawn: false
+
+# This drop the items when the server is reloading. If this is disabled and the server is reloading, the items will be gone forever
+dropItemsOnReload: true

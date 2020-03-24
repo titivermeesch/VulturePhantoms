@@ -3,6 +3,9 @@
 - Make the permission system mandantory
 - Remove vulturephantoms.exclude
 - Add vulturephantoms.allow
+- Add creative kill prevention (configurable)
+- Drop items of vultures on reload (configurable)
+- Drop items of vultures after delay is ended (configurable)
 
 # v1.2
 
