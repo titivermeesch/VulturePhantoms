@@ -30,3 +30,6 @@ vultureStealDrops: true
 
 # If this is set to true, users will need the permission vulturephantoms.allow to get vultures
 needPermissionToSpawn: false
+
+# This will prevent someone in creative to kill the vulture
+preventCreativeKill: true
