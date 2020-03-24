@@ -1,6 +1,10 @@
+# v1.3.1
+
+- Fix error when other mobs are dying
+
 # v1.3
 
-- Make the permission system mandantory
+- Make the permission system mandatory
 - Remove vulturephantoms.exclude
 - Add vulturephantoms.allow
 - Add creative kill prevention (configurable)

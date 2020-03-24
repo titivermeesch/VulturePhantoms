@@ -14,6 +14,10 @@ public class VultureDeath implements Listener {
 
     @EventHandler
     public void onVultureDeath(EntityDeathEvent e) {
+        if(!(e.getEntity() instanceof  Phantom)) {
+            return;
+        }
+
         Vulture vulture = VultureManager.getVulture((Phantom) e.getEntity());
         assert vulture != null;
 

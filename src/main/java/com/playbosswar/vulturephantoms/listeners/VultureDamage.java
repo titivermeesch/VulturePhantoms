@@ -16,6 +16,10 @@ public class VultureDamage implements Listener {
 
     @EventHandler
     public void onVultureDamage(EntityDamageByEntityEvent e) {
+        if(!(e.getEntity() instanceof Phantom)) {
+            return;
+        }
+
         Player p = (Player) e.getDamager();
         Vulture vulture = VultureManager.getVulture((Phantom) e.getEntity());
         assert vulture != null;
