@@ -20,7 +20,7 @@ public class VultureDamage implements Listener {
         Vulture vulture = VultureManager.getVulture((Phantom) e.getEntity());
         assert vulture != null;
 
-        if(plugin.getConfig().getBoolean("preventCreativeKill") && p.getGameMode() == GameMode.CREATIVE) {
+        if (plugin.getConfig().getBoolean("preventCreativeKill") && p.getGameMode() == GameMode.CREATIVE) {
             e.setCancelled(true);
         }
     }
